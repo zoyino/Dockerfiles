@@ -59,6 +59,7 @@ RUN ./configure --enable-unuran --enable-roofit --enable-gdml --enable-minuit2 -
 WORKDIR /
 
 # ARE SKOFL AND ATMPD REQUIRED FOR NEUT?!
+#Confirmed with Xiaoyue that they are not required
 RUN mkdir -p /opt/SKOFL
 WORKDIR /opt/SKOFL
 # From https://kmcvs.icrr.u-tokyo.ac.jp/svn/rep/skofl/tags/17a/
@@ -164,3 +165,7 @@ RUN sed -i 's:#alias:alias:g' ~/.bashrc \
     && sed -i 's:#alias:alias:g' ~/.tcshrc \
     && sed -i 's:#alias:alias:g' ~/.cshrc
 
+#CVS (don't think CMT is required)
+#JReWeight v1r13
+#NIWGReWeight v1r23p2
+#GEANTReWeight v1r1
